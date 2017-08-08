@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './App.css';
+import { Container, SomeService } from './ioc';
 
 const logo = require('./logo.svg');
 
@@ -13,6 +14,9 @@ class App extends React.Component<{}, {}> {
         </div>
         <p className="App-intro">
           To get started, edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <p>
+          {Container.get(SomeService).doSomeWork()}
         </p>
       </div>
     );
